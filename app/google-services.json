@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "760907686507",
+    "firebase_url": "https://blagapp-bfef4.firebaseio.com",
+    "project_id": "blagapp-bfef4",
+    "storage_bucket": "blagapp-bfef4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760907686507:android:d4415a5449a09d2d5e072e",
+        "android_client_info": {
+          "package_name": "com.example.blagapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "760907686507-f33g2pckirre8k6ig077icsncaaqrrnh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfC_VxJPrCW4VXQ0Ig7bcjmMdOXYDxx7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "760907686507-f33g2pckirre8k6ig077icsncaaqrrnh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

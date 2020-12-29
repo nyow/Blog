@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.PostDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/post_deal_img"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/post_deal_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="Title"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_deal_img" />
+
+        <ImageView
+            android:id="@+id/viewww"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_deal_title" />
+
+        <TextView
+            android:id="@+id/post_deal_date_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="18 Jan 2018 | By Dhaniesh Kumar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewww" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/dummyyyy"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:elevation="12dp"
+            android:layout_marginLeft="8dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/post_deal_date_name"
+            app:layout_constraintStart_toEndOf="@+id/post_deal_date_name"
+            app:layout_constraintTop_toTopOf="@+id/post_deal_date_name">
+
+            <ImageView
+                android:id="@+id/post_deal_user_img"
+                android:layout_width="20dp"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_background" />
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/post_deal_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:lineSpacingExtra="6dp"
+            android:text="@string/huge"
+            android:textColor="#373737"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_deal_date_name" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/damnnn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:elevation="12dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9"
+            app:cardCornerRadius="40dp"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_deal_desc">
+            <ImageView
+                android:id="@+id/post_deal_current_user_pic"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+        </androidx.cardview.widget.CardView>
+
+
+        <EditText
+            android:id="@+id/post_deal_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_button_style_rounded"
+            android:ems="10"
+            android:layout_marginHorizontal="8dp"
+            android:hint="Write Comments"
+            app:layout_constraintBottom_toBottomOf="@+id/damnnn"
+            app:layout_constraintEnd_toStartOf="@+id/post_deal_add_btn"
+            app:layout_constraintStart_toEndOf="@+id/damnnn"
+            app:layout_constraintTop_toTopOf="@+id/damnnn" />
+
+        <Button
+            android:id="@+id/post_deal_add_btn"
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/edittext_button_style_rounded"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="ADD"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/damnnn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/damnnn" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvcomment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/damnnn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

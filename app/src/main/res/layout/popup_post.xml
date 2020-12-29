@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/popupPostIm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sadasda"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:elevation="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:innerRadius="0dp"
+        android:padding="4dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="40dp">
+        <ImageView
+            android:id="@+id/popup_user_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/juzpic" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <EditText
+        android:id="@+id/popup_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/square_edittext"
+        android:ellipsize="end"
+        android:hint="Title"
+        android:lines="1"
+        android:padding="4dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sadasda"
+        app:layout_constraintEnd_toStartOf="@+id/sadasda"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sadasda" />
+
+    <EditText
+        android:id="@+id/popup_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:background="@drawable/square_edittext"
+        android:hint="Description"
+        android:padding="4dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/sadasda"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sadasda" />
+
+    <ImageView
+        android:id="@+id/popupPostIm"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginVertical="4dp"
+        android:scaleType="centerCrop"
+        android:background="#acacac"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/popup_desc" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/circle"
+        app:layout_constraintBottom_toBottomOf="@+id/popupPostIm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/popupPostIm" />
+
+    <ImageView
+        android:id="@+id/popup_add"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_create_black_24dp"
+        android:tint="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <ProgressBar
+        android:id="@+id/popup_progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
